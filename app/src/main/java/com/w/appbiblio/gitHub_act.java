@@ -26,13 +26,18 @@ public class gitHub_act extends AppCompatActivity {
         spinner     = (Spinner)findViewById(R.id.spinner);
         textView    = (TextView)findViewById(R.id.textView);
 
-        int farenheith      = 5000;
-        int revival         = 12000;
+        int farenheith      = 7000;
+        int revival         = 22000;
         int el_alquimista   = 45000;
+        int el_poder        = 88000;
+        int despertar       = 156000;
+
         ArrayList<String> libros = new ArrayList<String>();
         libros.add("Farenheith");
         libros.add("Revival");
         libros.add("El Alquimista");
+        libros.add("El Poder");
+        libros.add("Despertar");
 
         ArrayAdapter<String> adapt = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, libros);
         spinner.setAdapter(adapt);
@@ -45,17 +50,27 @@ public class gitHub_act extends AppCompatActivity {
                         String libro = spinner.getSelectedItem().toString();
                         if(libro.equals("Farenheith"))
                         {
-                            textView.setText(libro+ " " + farenheith);
+                            textView.setText("El valor de " + libro+ " " + farenheith);
                         }
 
                         if(libro.equals("Revival"))
                         {
-                            textView.setText(libro+ " " + revival);
+                            textView.setText("El valor de " + libro+ " " + revival);
                         }
 
                         if(libro.equals("El Alquimista"))
                         {
-                            textView.setText(libro+ " " + el_alquimista);
+                            textView.setText("El valor de " + libro+ " " + el_alquimista);
+                        }
+
+                        if(libro.equals("El Poder"))
+                        {
+                            textView.setText("El valor de " + libro+ " " + el_poder);
+                        }
+
+                        if(libro.equals("Despertar"))
+                        {
+                            textView.setText("El valor de " + libro+ " " + despertar);
                         }
 
                     }
